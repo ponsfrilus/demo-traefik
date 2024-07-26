@@ -10,6 +10,8 @@ The dashboard should be accessible at http://dashboard.localhost.
 The demo app ([whoami]), should be accessible at http://demotraefik.localhost.
 
 1) In [example_01](./example_01), the most basic configuration, all in HTTP.
+1) In [example_02](./example_02) a middleware (`https_redirect`) is used to 
+   redirect all HTTP to HTTPS, using the Traefik default certificat.
 
 
 [Traefik 3]: https://github.com/traefik/traefik/releases/tag/v3.1.0

@@ -1,0 +1,21 @@
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+log:
+  level: DEBUG
+
+api:
+  insecure: false
+  dashboard: true
+
+providers:
+  file:
+    directory: /etc/traefik
+    watch: true
+
+entryPoints:
+  http:
+    address: :80
+  https:
+    address: :443
