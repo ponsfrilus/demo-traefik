@@ -1,0 +1,17 @@
+http:
+  routers:
+    dashboard:
+      rule: 'Host(`dashboard.localhost`)'
+      service: api@internal
+
+    demotraefik:
+      rule: 'Host(`demotraefik.localhost`)'
+      service: demotraefik
+      entrypoints:
+        - http
+
+  services:
+    demotraefik:
+      loadBalancer:
+        servers:
+          - url: 'http://whoami'
