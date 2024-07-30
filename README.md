@@ -17,5 +17,6 @@ The demo app ([whoami]), should be accessible at http://demotraefik.localhost.
 
 
 [Traefik 3]: https://github.com/traefik/traefik/releases/tag/v3.1.0
-[^1]: https://datatracker.ietf.org/doc/html/rfc6761#section-6.3
 [whoami]: https://github.com/traefik/whoami
+
+[^1]: https://datatracker.ietf.org/doc/html/rfc6761#section-6.3
