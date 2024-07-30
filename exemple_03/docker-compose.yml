@@ -1,0 +1,18 @@
+services:
+  whoami:
+    container_name: dt_whoami
+    image: traefik/whoami
+    command:
+       - --name=dt_whoami
+
+  traefik:
+    container_name: dt_traefik
+    image: traefik:v3.1
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      # Map the static configuration into the container
+      - ./src/config/traefik.yml:/etc/traefik/traefik.yml:ro
+      # Map the dynamic configuration into the container
+      - ./src/config/dynamic.yml:/etc/traefik/dynamic.yml:ro
